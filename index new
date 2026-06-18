@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crystal Green Park | Premium Residential Plots in Gwalior</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+line-height:1.6;
+color:#333;
+background:#fff;
+}
+
+header{
+background:#2e7d32;
+color:#fff;
+padding:20px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
+}
+
+.hero{
+height:90vh;
+background:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80') center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero-content{
+background:rgba(0,0,0,0.55);
+padding:40px;
+border-radius:10px;
+max-width:700px;
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:20px;
+}
+
+.btn{
+display:inline-block;
+background:#4caf50;
+color:white;
+padding:12px 25px;
+text-decoration:none;
+border-radius:5px;
+font-weight:bold;
+}
+
+section{
+padding:70px 10%;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+color:#2e7d32;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.feature{
+background:#f4f4f4;
+padding:25px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+height:250px;
+object-fit:cover;
+}
+
+.contact{
+background:#f7f7f7;
+}
+
+.contact-info{
+text-align:center;
+margin-bottom:30px;
+}
+
+form{
+max-width:650px;
+margin:auto;
+}
+
+input, textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button{
+background:#2e7d32;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:5px;
+cursor:pointer;
+font-size:16px;
+}
+
+button:hover{
+background:#1b5e20;
+}
+
+iframe{
+border-radius:10px;
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div class="logo">Crystal Green Park</div>
+
+<nav>
+<a href="#about">About</a>
+<a href="#highlights">Highlights</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Crystal Green Park</h1>
+<p>Premium Residential Plots for Modern Living in Gwalior</p>
+
+<a href="#contact" class="btn">
+Book Site Visit
+</a>
+</div>
+</section>
+
+<section id="about">
+<h2>About Crystal Green Park</h2>
+
+<p style="text-align:center;font-size:18px;">
+Crystal Green Park is a premium plotted development located in a rapidly growing area of Gwalior.
+Designed to offer a peaceful lifestyle with modern infrastructure, wide roads, green spaces and excellent connectivity,
+it is the perfect destination for families and investors looking for long-term value.
+</p>
+</section>
+
+<section id="highlights">
+<h2>Project Highlights</h2>
+
+<div class="features">
+
+<div class="feature">
+<h3>Gated Community</h3>
+<p>Safe and secure environment.</p>
+</div>
+
+<div class="feature">
+<h3>Wide Roads</h3>
+<p>Planned road network for easy access.</p>
+</div>
+
+<div class="feature">
+<h3>Green Landscape</h3>
+<p>Nature-friendly development.</p>
+</div>
+
+<div class="feature">
+<h3>Investment Opportunity</h3>
+<p>High future growth potential.</p>
+</div>
+
+<div class="feature">
+<h3>Prime Location</h3>
+<p>Located in Sikandar Kampoo, Gwalior.</p>
+</div>
+
+<div class="feature">
+<h3>Easy Connectivity</h3>
+<p>Well connected to key city areas.</p>
+</div>
+
+</div>
+</section>
+
+<section id="gallery">
+<h2>Project Gallery</h2>
+
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80">
+</div>
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Contact Us</h2>
+
+<div class="contact-info">
+
+<h3>Crystal Green Park</h3>
+
+<p>
+In Front of Lodhi Dharamkata,<br>
+Sikandar Kampoo,<br>
+Gwalior, Madhya Pradesh - 474001
+</p>
+
+<p>
+📞 +91 9300611117
+</p>
+
+<p>
+✉ thecrystalgreenpark@gmail.com
+</p>
+
+<p>
+GPS Coordinates:<br>
+26.178548, 78.113114
+</p>
+
+<p>
+<a class="btn"
+href="https://maps.google.com/?q=26.178548,78.113114"
+target="_blank">
+Open in Google Maps
+</a>
+</p>
+
+</div>
+
+<form action="https://formsubmit.co/thecrystalgreenpark@gmail.com" method="POST">
+
+<input type="hidden" name="_subject" value="New Lead from Crystal Green Park Website">
+<input type="hidden" name="_captcha" value="false">
+
+<input type="text" name="Name" placeholder="Your Name" required>
+
+<input type="tel" name="Phone Number" placeholder="Phone Number" required>
+
+<input type="email" name="Email" placeholder="Email Address" required>
+
+<textarea name="Message" rows="5" placeholder="Write your enquiry here..." required></textarea>
+
+<button type="submit">
+Submit Inquiry
+</button>
+
+</form>
+
+</section>
+
+<section id="location">
+<h2>Find Us On Map</h2>
+
+<iframe
+src="https://maps.google.com/maps?q=26.178548,78.113114&t=&z=16&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="450"
+loading="lazy">
+</iframe>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Crystal Green Park
+</p>
+
+<p>
+In Front of Lodhi Dharamkata, Sikandar Kampoo,
+Gwalior, Madhya Pradesh - 474001
+</p>
+
+<p>
+Phone: +91 9300611117 |
+Email: thecrystalgreenpark@gmail.com
+</p>
+
+</footer>
+
+<a class="whatsapp"
+href="https://wa.me/919300611117"
+target="_blank">
+WhatsApp </a>
+
+</body>
+</html>
