@@ -1,235 +1,435 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Crystal Green Park - Premium Residential Plots</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crystal Green Park | Premium Residential Plots in Gwalior</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-body{
-    line-height:1.6;
-    color:#333;
-}
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #243026;
+      background: #fff;
+    }
 
-header{
-    background:#2e7d32;
-    color:white;
-    padding:20px 50px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 18px 8%;
+      background: #226b35;
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    }
 
-.logo{
-    font-size:28px;
-    font-weight:bold;
-}
+    .logo {
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 700;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-}
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px 18px;
+    }
 
-.hero{
-    height:90vh;
-    background:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef') center/cover;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:white;
-}
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+    }
 
-.hero-content{
-    background:rgba(0,0,0,0.5);
-    padding:40px;
-    border-radius:10px;
-}
+    nav a:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
 
-.hero h1{
-    font-size:55px;
-    margin-bottom:15px;
-}
+    .hero {
+      min-height: 86vh;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(7, 31, 13, 0.78), rgba(7, 31, 13, 0.38)),
+        url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1800&q=80") center/cover;
+    }
 
-.hero p{
-    font-size:22px;
-}
+    .hero-content {
+      width: min(760px, 84%);
+      margin-left: 8%;
+    }
 
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    background:#4caf50;
-    color:white;
-    padding:12px 25px;
-    text-decoration:none;
-    border-radius:5px;
-}
+    .hero h1 {
+      font-size: clamp(42px, 8vw, 78px);
+      line-height: 1;
+      margin-bottom: 18px;
+      letter-spacing: 0;
+    }
 
-section{
-    padding:70px 10%;
-}
+    .hero p {
+      max-width: 620px;
+      margin-bottom: 28px;
+      font-size: clamp(19px, 2.8vw, 28px);
+      line-height: 1.3;
+    }
 
-h2{
-    text-align:center;
-    margin-bottom:40px;
-    color:#2e7d32;
-}
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 24px;
+      border-radius: 6px;
+      background: #2f8f46;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      border: 0;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
 
-.features{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
+    .btn:hover,
+    button:hover {
+      background: #1f6d32;
+      transform: translateY(-1px);
+    }
 
-.feature{
-    background:#f4f4f4;
-    padding:25px;
-    border-radius:10px;
-    text-align:center;
-}
+    section {
+      padding: 72px 8%;
+    }
 
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:20px;
-}
+    h2 {
+      margin-bottom: 34px;
+      color: #226b35;
+      text-align: center;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.15;
+    }
 
-.gallery img{
-    width:100%;
-    border-radius:10px;
-}
+    .about-text {
+      max-width: 920px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 18px;
+    }
 
-.contact{
-    background:#f8f8f8;
-}
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
 
-form{
-    max-width:600px;
-    margin:auto;
-}
+    .feature {
+      min-height: 155px;
+      padding: 26px;
+      border: 1px solid #dce8df;
+      border-radius: 8px;
+      background: #f7faf8;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(34, 107, 53, 0.08);
+    }
 
-input, textarea{
-    width:100%;
-    padding:12px;
-    margin-bottom:15px;
-    border:1px solid #ccc;
-    border-radius:5px;
-}
+    .feature h3 {
+      margin-bottom: 10px;
+      color: #1f5f2f;
+      font-size: 21px;
+    }
 
-button{
-    background:#2e7d32;
-    color:white;
-    border:none;
-    padding:12px 25px;
-    border-radius:5px;
-    cursor:pointer;
-}
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
 
-footer{
-    <p>
-        © 2026 Crystal Green Park |
-        In Front of Lodhi Dharamkata,
-        Sikandar Kampoo, Gwalior,
-        Madhya Pradesh - 474001
-    </p>
+    .gallery img {
+      width: 100%;
+      height: 260px;
+      display: block;
+      border-radius: 8px;
+      object-fit: cover;
+    }
 
-```
-<p>
-    Phone: +91 9300611117 |
-    Email: thecrystalgreenpark@gmail.com
-</p>
-```
-}
-</style>
+    .contact {
+      background: #f4f7f4;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: minmax(260px, 0.85fr) minmax(280px, 1.15fr);
+      gap: 34px;
+      align-items: start;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .contact-info,
+    form {
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+    }
+
+    .contact-info {
+      padding: 28px;
+    }
+
+    .contact-info h3 {
+      margin-bottom: 16px;
+      color: #1f5f2f;
+      font-size: 24px;
+    }
+
+    .contact-info p {
+      margin-bottom: 16px;
+    }
+
+    form {
+      padding: 28px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 13px 14px;
+      border: 1px solid #cdd8cf;
+      border-radius: 6px;
+      font: inherit;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: 2px solid rgba(47, 143, 70, 0.25);
+      border-color: #2f8f46;
+    }
+
+    button {
+      min-height: 46px;
+      padding: 12px 24px;
+      border: 0;
+      border-radius: 6px;
+      background: #226b35;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 700;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    iframe {
+      width: 100%;
+      height: 450px;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    footer {
+      padding: 28px 8%;
+      background: #1d241f;
+      color: #fff;
+      text-align: center;
+    }
+
+    footer p + p {
+      margin-top: 8px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 1001;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 13px 20px;
+      border-radius: 999px;
+      background: #25d366;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+    }
+
+    @media (max-width: 760px) {
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 16px 6%;
+      }
+
+      nav {
+        justify-content: flex-start;
+      }
+
+      .hero {
+        min-height: 78vh;
+      }
+
+      .hero-content {
+        width: 88%;
+        margin-left: 6%;
+      }
+
+      section {
+        padding: 56px 6%;
+      }
+
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery img {
+        height: 220px;
+      }
+
+      .whatsapp {
+        right: 14px;
+        bottom: 14px;
+      }
+    }
+  </style>
 </head>
-
 <body>
-
-<header>
+  <header>
     <div class="logo">Crystal Green Park</div>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#features">Features</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
+    <nav aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#highlights">Highlights</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
     </nav>
-</header>
+  </header>
 
-<section class="hero">
-    <div class="hero-content">
+  <main>
+    <section class="hero">
+      <div class="hero-content">
         <h1>Crystal Green Park</h1>
-        <p>Premium Residential Plots for Your Dream Home</p>
-        <a href="#contact" class="btn">Book a Site Visit</a>
-    </div>
-</section>
+        <p>Premium Residential Plots for Modern Living in Gwalior</p>
+        <a href="#contact" class="btn">Book Site Visit</a>
+      </div>
+    </section>
 
-<section id="about">
-    <h2>About Crystal Green Park</h2>
-    <p style="text-align:center;">
-        Crystal Green Park is a premium plotted development designed
-        for families looking for peaceful living and long-term investment.
-        Surrounded by greenery and modern infrastructure, it offers
-        the perfect balance of comfort and nature.
-    </p>
-</section>
+    <section id="about">
+      <h2>About Crystal Green Park</h2>
+      <p class="about-text">
+        Crystal Green Park is a premium plotted development located in a rapidly growing area of Gwalior.
+        Designed to offer a peaceful lifestyle with modern infrastructure, wide roads, green spaces and excellent
+        connectivity, it is the perfect destination for families and investors looking for long-term value.
+      </p>
+    </section>
 
-<section id="features">
-    <h2>Project Highlights</h2>
-    <div class="features">
+    <section id="highlights">
+      <h2>Project Highlights</h2>
+      <div class="features">
         <div class="feature">
-            <h3>Gated Community</h3>
-            <p>Secure and well-planned residential layout.</p>
+          <h3>Gated Community</h3>
+          <p>Safe and secure environment.</p>
+        </div>
+        <div class="feature">
+          <h3>Wide Roads</h3>
+          <p>Planned road network for easy access.</p>
+        </div>
+        <div class="feature">
+          <h3>Green Landscape</h3>
+          <p>Nature-friendly development.</p>
+        </div>
+        <div class="feature">
+          <h3>Investment Opportunity</h3>
+          <p>High future growth potential.</p>
+        </div>
+        <div class="feature">
+          <h3>Prime Location</h3>
+          <p>Located in Sikandar Kampoo, Gwalior.</p>
+        </div>
+        <div class="feature">
+          <h3>Easy Connectivity</h3>
+          <p>Well connected to key city areas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Project Gallery</h2>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80" alt="Open green land suitable for a plotted development">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80" alt="Modern residential buildings">
+        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80" alt="Contemporary home exterior">
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Contact Us</h2>
+      <div class="contact-layout">
+        <div class="contact-info">
+          <h3>Crystal Green Park</h3>
+          <p>
+            In Front of Lodhi Dharamkata,<br>
+            Sikandar Kampoo,<br>
+            Gwalior, Madhya Pradesh - 474001
+          </p>
+          <p>Phone: +91 9300611117</p>
+          <p>Email: thecrystalgreenpark@gmail.com</p>
+          <p>
+            GPS Coordinates:<br>
+            26.178548, 78.113114
+          </p>
+          <p>
+            <a class="btn" href="https://maps.google.com/?q=26.178548,78.113114" target="_blank" rel="noopener">
+              Open in Google Maps
+            </a>
+          </p>
         </div>
 
-        <div class="feature">
-            <h3>Wide Roads</h3>
-            <p>Modern road infrastructure and connectivity.</p>
-        </div>
+        <form action="https://formsubmit.co/thecrystalgreenpark@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New Lead from Crystal Green Park Website">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="tel" name="Phone Number" placeholder="Phone Number" required>
+          <input type="email" name="Email" placeholder="Email Address" required>
+          <textarea name="Message" rows="5" placeholder="Write your enquiry here..." required></textarea>
+          <button type="submit">Submit Inquiry</button>
+        </form>
+      </div>
+    </section>
 
-        <div class="feature">
-            <h3>Green Parks</h3>
-            <p>Beautiful landscaped gardens and open spaces.</p>
-        </div>
+    <section id="location">
+      <h2>Find Us On Map</h2>
+      <iframe
+        src="https://maps.google.com/maps?q=26.178548,78.113114&t=&z=16&ie=UTF8&iwloc=&output=embed"
+        loading="lazy"
+        title="Crystal Green Park location map">
+      </iframe>
+    </section>
+  </main>
 
-        <div class="feature">
-            <h3>24/7 Security</h3>
-            <p>Safe and secure environment for your family.</p>
-        </div>
-    </div>
-</section>
+  <footer>
+    <p>&copy; 2026 Crystal Green Park</p>
+    <p>In Front of Lodhi Dharamkata, Sikandar Kampoo, Gwalior, Madhya Pradesh - 474001</p>
+    <p>Phone: +91 9300611117 | Email: thecrystalgreenpark@gmail.com</p>
+  </footer>
 
-<section id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery">
-        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef">
-        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab">
-        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750">
-    </div>
-</section>
-
-<section class="contact" id="contact">
-    <h2>Contact Us</h2>
-
-    <form>
-        <input type="text" placeholder="Your Name">
-        <input type="tel" placeholder="Phone Number">
-        <input type="email" placeholder="Email Address">
-        <textarea rows="5" placeholder="Message"></textarea>
-        <button type="submit">Submit Inquiry</button>
-    </form>
-</section>
-
-<footer>
-    <p>© 2026 Crystal Green Park. All Rights Reserved.</p>
-</footer>
-
+  <a class="whatsapp" href="https://wa.me/919300611117" target="_blank" rel="noopener">WhatsApp</a>
 </body>
 </html>
