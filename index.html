@@ -298,40 +298,6 @@
       font-size: 13px;
     }
 
-    .plots-section {
-      background: var(--paper);
-    }
-
-    .plot-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      border-top: 1px solid var(--line);
-      border-left: 1px solid var(--line);
-    }
-
-    .plot-size {
-      min-height: 148px;
-      padding: 24px;
-      border-right: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .plot-size strong {
-      display: block;
-      color: var(--forest);
-      font-family: var(--serif);
-      font-size: 29px;
-      font-weight: 500;
-      white-space: nowrap;
-    }
-
-    .plot-size span {
-      display: block;
-      margin-top: 8px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
     .plot-note,
     .legal-note {
       margin: 18px 0 0;
@@ -379,10 +345,6 @@
       color: #f1ce86;
       font-weight: 700;
       text-underline-offset: 4px;
-    }
-
-    .plan-sheet-heading {
-      margin-top: 64px;
     }
 
     .amenities-grid {
@@ -605,10 +567,6 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .plot-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
       .amenities-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -700,15 +658,6 @@
         font-size: 24px;
       }
 
-      .plot-size {
-        min-height: 126px;
-        padding: 18px 12px;
-      }
-
-      .plot-size strong {
-        font-size: 22px;
-      }
-
       .plan-frame {
         padding: 5px;
       }
@@ -768,7 +717,6 @@
       </a>
       <nav aria-label="Primary navigation">
         <a href="#project">The project</a>
-        <a href="#plots">Plot sizes</a>
         <a href="#master-plan">Master plan</a>
         <a href="#amenities">Amenities</a>
         <a href="#location">Location</a>
@@ -784,7 +732,6 @@
         <h1>Crystal Green Park</h1>
         <p class="hero-copy">Your land, your legacy. A thoughtfully planned residential community on A-B Road, NH-47.</p>
         <div class="hero-actions">
-          <a class="button" href="#plots">Explore plot sizes</a>
           <a class="button button-light" href="#master-plan">View project layout</a>
         </div>
       </div>
@@ -827,23 +774,6 @@
       </div>
     </section>
 
-    <section class="section plots-section" id="plots">
-      <div class="section-wrap">
-        <div class="section-heading">
-          <p class="eyebrow">Choose your space</p>
-          <h2>Plot dimensions shown in the project material</h2>
-          <p>The supplied plan legend lists these standard residential plot sizes alongside commercial, LIG and EWS plots.</p>
-        </div>
-        <div class="plot-grid" aria-label="Residential plot sizes">
-          <div class="plot-size"><strong>25 × 55 ft</strong><span>Residential plots</span></div>
-          <div class="plot-size"><strong>20 × 55 ft</strong><span>Residential plots</span></div>
-          <div class="plot-size"><strong>25 × 50 ft</strong><span>Residential plots</span></div>
-          <div class="plot-size"><strong>22 × 50 ft</strong><span>Residential plots</span></div>
-        </div>
-        <p class="plot-note">Commercial, even, uneven, LIG and EWS plots are also marked in the project material. Confirm plot numbers, measurements and current availability with the project office.</p>
-      </div>
-    </section>
-
     <section class="plan-section" id="master-plan">
       <div class="section-wrap">
         <div class="section-heading">
@@ -859,20 +789,6 @@
         <div class="plan-caption">
           <span>Web-optimized view of the supplied layout image. Click the image to open a larger version.</span>
           <a href="Crystal%20Green%20Park.pdf" target="_blank" rel="noopener">Open the project brochure</a>
-        </div>
-        <div class="section-heading plan-sheet-heading">
-          <p class="eyebrow">Numbered site plan</p>
-          <h2>Plot numbers and dimensions</h2>
-          <p>The dimensioned layout from the supplied brochure. Open the image separately to zoom in on individual plots.</p>
-        </div>
-        <figure class="plan-frame">
-          <a href="plot-master-plan.jpg" target="_blank" rel="noopener">
-            <img src="plot-master-plan.jpg" alt="Numbered Crystal Green Park master plan with individual plot dimensions and area statement" loading="lazy" decoding="async">
-          </a>
-        </figure>
-        <div class="plan-caption">
-          <span>Plot positions and dimensions are shown as published in the supplied project material.</span>
-          <a href="plot-master-plan.jpg" target="_blank" rel="noopener">Open full-size plot plan</a>
         </div>
       </div>
     </section>
