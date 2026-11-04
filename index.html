@@ -347,6 +347,33 @@
       text-underline-offset: 4px;
     }
 
+    .video-section {
+      padding: 82px 0;
+      background: var(--forest);
+      color: #fff;
+    }
+
+    .video-section h2 {
+      color: #fff;
+    }
+
+    .video-section .section-heading p {
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .project-video {
+      display: block;
+      width: 100%;
+      max-height: 72vh;
+      background: #07180f;
+    }
+
+    .video-note {
+      margin: 12px 0 0;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 13px;
+    }
+
     .amenities-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -371,6 +398,36 @@
       margin-bottom: 0;
       color: var(--muted);
       font-size: 14px;
+    }
+
+    .brochure-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 52px;
+    }
+
+    .brochure-gallery figure {
+      min-width: 0;
+      margin: 0;
+    }
+
+    .brochure-gallery img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1.2;
+      object-fit: cover;
+    }
+
+    .brochure-gallery figcaption {
+      padding-top: 10px;
+      color: var(--forest);
+      font-family: var(--serif);
+      font-size: 18px;
+    }
+
+    .gallery-note {
+      margin-top: 16px;
     }
 
     .location-section {
@@ -570,6 +627,10 @@
       .amenities-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
+
+      .brochure-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
 
     @media (max-width: 620px) {
@@ -671,6 +732,14 @@
         grid-template-columns: 1fr;
       }
 
+      .brochure-gallery {
+        gap: 18px 12px;
+      }
+
+      .brochure-gallery figcaption {
+        font-size: 16px;
+      }
+
       .map-frame,
       .map-frame iframe {
         min-height: 320px;
@@ -718,6 +787,7 @@
       <nav aria-label="Primary navigation">
         <a href="#project">The project</a>
         <a href="#master-plan">Master plan</a>
+        <a href="#video">Video</a>
         <a href="#amenities">Amenities</a>
         <a href="#location">Location</a>
       </nav>
@@ -793,6 +863,21 @@
       </div>
     </section>
 
+    <section class="video-section" id="video">
+      <div class="section-wrap">
+        <div class="section-heading">
+          <p class="eyebrow">Take a closer look</p>
+          <h2>Crystal Green Park on video.</h2>
+          <p>View the project video supplied by Crystal Green Park.</p>
+        </div>
+        <video class="project-video" controls playsinline preload="metadata" poster="master-plan-web.jpg">
+          <source src="Video%202026-11-04%20at%206.16.59%20PM.mp4" type="video/mp4">
+          Your browser does not support embedded video. Please use a modern browser to watch this video.
+        </video>
+        <p class="video-note">Project visuals are for promotional purposes; confirm current details with the project office.</p>
+      </div>
+    </section>
+
     <section class="section" id="amenities">
       <div class="section-wrap">
         <div class="section-heading">
@@ -807,6 +892,14 @@
           <article class="amenity"><h3>Outdoor activity</h3><p>Children’s play area and outdoor gym space.</p></article>
           <article class="amenity"><h3>Planned services</h3><p>Underground electrification and a sewage treatment plant are identified in the plan.</p></article>
           <article class="amenity"><h3>Water-conscious planning</h3><p>Rainwater harvesting is included in the site-plan legend.</p></article>
+        </div>
+        <div class="brochure-gallery" aria-label="Amenity renderings from the project brochure">
+          <figure><img src="amenity-play-area.webp" alt="Artist's rendering of a children's play area with swings and slides" loading="lazy" decoding="async"><figcaption>Children’s play area</figcaption></figure>
+          <figure><img src="amenity-wellness-lawn.webp" alt="Artist's rendering of an open yoga and wellness lawn" loading="lazy" decoding="async"><figcaption>Yoga and wellness lawn</figcaption></figure>
+          <figure><img src="amenity-pergola.webp" alt="Artist's rendering of a shaded pergola and garden seating" loading="lazy" decoding="async"><figcaption>Pergola and seating</figcaption></figure>
+          <figure><img src="amenity-water-feature.webp" alt="Artist's rendering of the entrance water feature and gate cabin" loading="lazy" decoding="async"><figcaption>Entrance water feature</figcaption></figure>
+          <figure><img src="amenity-walking-promenade.webp" alt="Artist's rendering of a landscaped walking promenade" loading="lazy" decoding="async"><figcaption>Walking promenade</figcaption></figure>
+          <figure><img src="amenity-lit-roads.webp" alt="Artist's rendering of lit roads and pedestrian footpaths" loading="lazy" decoding="async"><figcaption>Lit roads and footpaths</figcaption></figure>
         </div>
         <p class="legal-note">Project features and approvals are reproduced from supplied promotional material; confirm current specifications with the project office.</p>
       </div>
@@ -826,10 +919,10 @@
             <p>Brochure-stated: about 15 minutes from Maharaj Bada.</p>
           </div>
           <p class="legal-note">Travel times and distances are approximate and should be checked against current routes.</p>
-          <a class="button" href="https://maps.google.com/?q=Crystal+Green+Park,+Girwai,+Gwalior" target="_blank" rel="noopener">Open in Google Maps</a>
+          <a class="button" href="https://maps.google.com/?q=26.178459,78.112831" target="_blank" rel="noopener">Open in Google Maps</a>
         </div>
         <div class="map-frame">
-          <iframe src="https://maps.google.com/maps?q=Crystal%20Green%20Park%2C%20Girwai%2C%20Gwalior&z=14&output=embed" loading="lazy" title="Map showing Crystal Green Park in Girwai, Gwalior"></iframe>
+          <iframe src="https://maps.google.com/maps?q=26.178459,78.112831&z=16&output=embed" loading="lazy" title="Map showing Crystal Green Park at 26.178459, 78.112831"></iframe>
         </div>
       </div>
     </section>
