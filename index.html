@@ -3,433 +3,963 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crystal Green Park | Premium Residential Plots in Gwalior</title>
+  <meta name="description" content="Explore Crystal Green Park, a planned residential plotted community on A-B Road in Girwai, Gwalior.">
+  <meta name="theme-color" content="#103c27">
+  <title>Crystal Green Park | Residential Plots in Girwai, Gwalior</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      color-scheme: light;
+      --forest: #103c27;
+      --forest-deep: #082719;
+      --leaf: #39744c;
+      --gold: #c99a45;
+      --paper: #f3f0e7;
+      --paper-light: #fbfaf6;
+      --ink: #1c3025;
+      --muted: #5f6b61;
+      --line: #d7d9ca;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", "Segoe UI", sans-serif;
+    }
+
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
     }
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 100px;
     }
 
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #243026;
-      background: #fff;
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper-light);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.65;
     }
 
-    header {
+    a {
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .site-header {
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 10;
+      background: var(--paper-light);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      width: min(1280px, 92%);
+      min-height: 84px;
+      margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
-      padding: 18px 8%;
-      background: #226b35;
-      color: #fff;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+      gap: 28px;
     }
 
-    .logo {
-      font-size: clamp(22px, 3vw, 30px);
-      font-weight: 700;
-      letter-spacing: 0;
-      white-space: nowrap;
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--forest);
+      text-decoration: none;
+      flex: 0 0 auto;
+    }
+
+    .brand img {
+      display: block;
+      width: 58px;
+      height: 58px;
+      object-fit: cover;
+      border: 1px solid #8e682f;
+    }
+
+    .brand span {
+      font-family: var(--serif);
+      font-size: 20px;
+      line-height: 1.15;
     }
 
     nav {
       display: flex;
-      flex-wrap: wrap;
+      align-items: center;
       justify-content: flex-end;
-      gap: 8px 18px;
+      gap: 24px;
     }
 
     nav a {
-      color: #fff;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 600;
       text-decoration: none;
-      font-weight: 700;
-      font-size: 15px;
+      white-space: nowrap;
     }
 
-    nav a:hover {
+    nav a:hover,
+    nav a:focus-visible {
+      color: var(--leaf);
       text-decoration: underline;
-      text-underline-offset: 4px;
+      text-underline-offset: 5px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 22px;
+      border: 1px solid var(--gold);
+      border-radius: 3px;
+      background: var(--gold);
+      color: var(--forest-deep);
+      font-weight: 700;
+      text-decoration: none;
+      transition: background-color 180ms ease, color 180ms ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      background: #e0b766;
+    }
+
+    .button-light {
+      border-color: rgba(255, 255, 255, 0.75);
+      background: transparent;
+      color: #fff;
+    }
+
+    .button-light:hover,
+    .button-light:focus-visible {
+      background: #fff;
+      color: var(--forest-deep);
     }
 
     .hero {
-      min-height: 86vh;
+      min-height: 620px;
       display: flex;
       align-items: center;
       color: #fff;
       background:
-        linear-gradient(90deg, rgba(7, 31, 13, 0.78), rgba(7, 31, 13, 0.38)),
-        url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1800&q=80") center/cover;
+        linear-gradient(90deg, rgba(6, 31, 19, 0.94) 0%, rgba(6, 31, 19, 0.76) 42%, rgba(6, 31, 19, 0.12) 100%),
+        url("master-plan-web.jpg") center 48% / cover;
     }
 
     .hero-content {
-      width: min(760px, 84%);
-      margin-left: 8%;
+      width: min(1280px, 92%);
+      margin: 0 auto;
+      padding: 92px 0 104px;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
     }
 
     .hero h1 {
-      font-size: clamp(42px, 8vw, 78px);
-      line-height: 1;
+      max-width: 760px;
       margin-bottom: 18px;
-      letter-spacing: 0;
+      font-family: var(--serif);
+      font-size: 72px;
+      font-weight: 500;
+      line-height: 1.08;
     }
 
-    .hero p {
+    .hero-copy {
       max-width: 620px;
-      margin-bottom: 28px;
-      font-size: clamp(19px, 2.8vw, 28px);
-      line-height: 1.3;
+      margin-bottom: 30px;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 20px;
     }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 46px;
-      padding: 12px 24px;
-      border-radius: 6px;
-      background: #2f8f46;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 700;
-      border: 0;
-      cursor: pointer;
-      transition: background 0.2s ease, transform 0.2s ease;
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
-    .btn:hover,
-    button:hover {
-      background: #1f6d32;
-      transform: translateY(-1px);
+    .section-wrap {
+      width: min(1160px, 88%);
+      margin: 0 auto;
     }
 
-    section {
-      padding: 72px 8%;
+    .section {
+      padding: 94px 0;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 42px;
+    }
+
+    .section-heading .eyebrow {
+      color: var(--leaf);
     }
 
     h2 {
-      margin-bottom: 34px;
-      color: #226b35;
-      text-align: center;
-      font-size: clamp(28px, 4vw, 42px);
+      margin-bottom: 16px;
+      color: var(--forest);
+      font-family: var(--serif);
+      font-size: 46px;
+      font-weight: 500;
       line-height: 1.15;
     }
 
-    .about-text {
-      max-width: 920px;
-      margin: 0 auto;
-      text-align: center;
+    .section-heading p,
+    .intro-copy {
+      color: var(--muted);
       font-size: 18px;
     }
 
-    .features {
+    .intro-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-    }
-
-    .feature {
-      min-height: 155px;
-      padding: 26px;
-      border: 1px solid #dce8df;
-      border-radius: 8px;
-      background: #f7faf8;
-      text-align: center;
-      box-shadow: 0 8px 24px rgba(34, 107, 53, 0.08);
-    }
-
-    .feature h3 {
-      margin-bottom: 10px;
-      color: #1f5f2f;
-      font-size: 21px;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: 260px;
-      display: block;
-      border-radius: 8px;
-      object-fit: cover;
-    }
-
-    .contact {
-      background: #f4f7f4;
-    }
-
-    .contact-layout {
-      display: grid;
-      grid-template-columns: minmax(260px, 0.85fr) minmax(280px, 1.15fr);
-      gap: 34px;
+      grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
+      gap: 72px;
       align-items: start;
-      max-width: 1080px;
+    }
+
+    .intro-copy {
+      max-width: 680px;
+      margin-bottom: 0;
+    }
+
+    .intro-aside {
+      padding: 24px 0 24px 26px;
+      border-left: 2px solid var(--gold);
+    }
+
+    .intro-aside strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--forest);
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+    .intro-aside p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .facts-band {
+      padding: 36px 0;
+      background: var(--forest);
+      color: #fff;
+    }
+
+    .facts-grid {
+      width: min(1160px, 88%);
       margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 24px;
     }
 
-    .contact-info,
-    form {
-      border-radius: 8px;
+    .fact {
+      padding-left: 18px;
+      border-left: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .fact strong {
+      display: block;
+      color: #f1ce86;
+      font-family: var(--serif);
+      font-size: 30px;
+      font-weight: 500;
+      line-height: 1.15;
+    }
+
+    .fact span {
+      display: block;
+      margin-top: 7px;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 13px;
+    }
+
+    .plots-section {
+      background: var(--paper);
+    }
+
+    .plot-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+
+    .plot-size {
+      min-height: 148px;
+      padding: 24px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .plot-size strong {
+      display: block;
+      color: var(--forest);
+      font-family: var(--serif);
+      font-size: 29px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .plot-size span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .plot-note,
+    .legal-note {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .plan-section {
+      padding: 94px 0 100px;
+      background: var(--forest-deep);
+      color: #fff;
+    }
+
+    .plan-section h2 {
+      color: #fff;
+    }
+
+    .plan-section .section-heading p {
+      color: rgba(255, 255, 255, 0.76);
+    }
+
+    .plan-frame {
+      margin: 0;
+      padding: 10px;
       background: #fff;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
     }
 
-    .contact-info {
-      padding: 28px;
+    .plan-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
     }
 
-    .contact-info h3 {
-      margin-bottom: 16px;
-      color: #1f5f2f;
-      font-size: 24px;
+    .plan-caption {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-top: 20px;
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 14px;
     }
 
-    .contact-info p {
-      margin-bottom: 16px;
+    .plan-caption a {
+      color: #f1ce86;
+      font-weight: 700;
+      text-underline-offset: 4px;
     }
 
-    form {
-      padding: 28px;
+    .plan-sheet-heading {
+      margin-top: 64px;
+    }
+
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0 36px;
+      border-top: 1px solid var(--line);
+    }
+
+    .amenity {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .amenity h3 {
+      margin-bottom: 6px;
+      color: var(--forest);
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+    .amenity p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .location-section {
+      background: var(--paper);
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
+      gap: 54px;
+      align-items: start;
+    }
+
+    .location-copy address {
+      margin-bottom: 24px;
+      color: var(--muted);
+      font-style: normal;
+      font-size: 18px;
+    }
+
+    .nearby-list {
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .nearby-list p {
+      margin-bottom: 6px;
+    }
+
+    .nearby-list p:last-child {
+      margin-bottom: 0;
+    }
+
+    .map-frame {
+      min-height: 380px;
+      border: 0;
+      background: #dfe5d6;
+    }
+
+    .map-frame iframe {
+      display: block;
+      width: 100%;
+      height: 380px;
+      border: 0;
+    }
+
+    .contact-section {
+      padding: 94px 0;
+      background: var(--paper-light);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(300px, 1.15fr);
+      gap: 64px;
+      align-items: start;
+    }
+
+    .contact-details p {
+      margin-bottom: 12px;
+      color: var(--muted);
+    }
+
+    .contact-details a {
+      color: var(--forest);
+      font-weight: 700;
+      text-underline-offset: 3px;
+    }
+
+    .contact-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      padding-top: 6px;
+    }
+
+    .form-field {
+      display: grid;
+      gap: 6px;
+    }
+
+    .form-field-wide {
+      grid-column: 1 / -1;
+    }
+
+    .form-field label {
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 700;
     }
 
     input,
     textarea {
       width: 100%;
-      margin-bottom: 15px;
-      padding: 13px 14px;
-      border: 1px solid #cdd8cf;
-      border-radius: 6px;
+      min-height: 48px;
+      padding: 12px 14px;
+      border: 1px solid #bdc5b9;
+      border-radius: 2px;
+      background: #fff;
+      color: var(--ink);
       font: inherit;
+    }
+
+    textarea {
+      min-height: 130px;
       resize: vertical;
     }
 
-    input:focus,
-    textarea:focus {
-      outline: 2px solid rgba(47, 143, 70, 0.25);
-      border-color: #2f8f46;
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 2px solid var(--leaf);
+      outline-offset: 2px;
     }
 
-    button {
-      min-height: 46px;
-      padding: 12px 24px;
-      border: 0;
-      border-radius: 6px;
-      background: #226b35;
-      color: #fff;
+    .contact-form button {
+      justify-self: start;
       cursor: pointer;
-      font-size: 16px;
-      font-weight: 700;
-      transition: background 0.2s ease, transform 0.2s ease;
+      font: inherit;
     }
 
-    iframe {
-      width: 100%;
-      height: 450px;
-      border: 0;
-      border-radius: 8px;
+    .site-footer {
+      padding: 28px 0;
+      background: var(--forest-deep);
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 13px;
     }
 
-    footer {
-      padding: 28px 8%;
-      background: #1d241f;
-      color: #fff;
-      text-align: center;
+    .footer-inner {
+      width: min(1160px, 88%);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
     }
 
-    footer p + p {
-      margin-top: 8px;
+    .footer-inner p {
+      margin-bottom: 0;
     }
 
     .whatsapp {
       position: fixed;
-      right: 20px;
-      bottom: 20px;
-      z-index: 1001;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+      right: 18px;
+      bottom: 18px;
+      z-index: 9;
       min-height: 48px;
-      padding: 13px 20px;
-      border-radius: 999px;
-      background: #25d366;
+      padding: 12px 18px;
+      border: 1px solid #146c45;
+      border-radius: 3px;
+      background: #157347;
       color: #fff;
-      text-decoration: none;
+      font-size: 14px;
       font-weight: 700;
-      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+      text-decoration: none;
     }
 
-    @media (max-width: 760px) {
-      header {
-        align-items: flex-start;
-        flex-direction: column;
-        padding: 16px 6%;
+    .whatsapp:hover,
+    .whatsapp:focus-visible {
+      background: #0e5735;
+    }
+
+    @media (max-width: 900px) {
+      .header-inner {
+        width: 94%;
+        min-height: 76px;
+        gap: 16px;
       }
 
       nav {
+        gap: 14px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .header-cta {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 60px;
+      }
+
+      .intro-grid,
+      .location-grid,
+      .contact-grid {
+        gap: 36px;
+      }
+
+      .facts-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .plot-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .amenities-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 620px) {
+      html {
+        scroll-padding-top: 118px;
+      }
+
+      .header-inner {
+        min-height: auto;
+        padding: 10px 0 12px;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .brand img {
+        width: 46px;
+        height: 46px;
+      }
+
+      .brand span {
+        font-size: 18px;
+      }
+
+      nav {
+        width: 100%;
         justify-content: flex-start;
+        gap: 18px;
+        overflow-x: auto;
+        padding-bottom: 3px;
       }
 
       .hero {
-        min-height: 78vh;
+        min-height: 540px;
+        background-position: 58% center;
       }
 
       .hero-content {
         width: 88%;
-        margin-left: 6%;
+        padding: 66px 0 78px;
       }
 
-      section {
-        padding: 56px 6%;
+      .hero h1 {
+        font-size: 48px;
       }
 
-      .contact-layout {
+      .hero-copy {
+        font-size: 17px;
+      }
+
+      .section,
+      .plan-section,
+      .contact-section {
+        padding: 68px 0;
+      }
+
+      h2 {
+        font-size: 34px;
+      }
+
+      .section-wrap,
+      .facts-grid,
+      .footer-inner {
+        width: 88%;
+      }
+
+      .intro-grid,
+      .location-grid,
+      .contact-grid {
         grid-template-columns: 1fr;
       }
 
-      .gallery img {
-        height: 220px;
+      .intro-aside {
+        padding: 4px 0 4px 20px;
+      }
+
+      .facts-grid {
+        gap: 24px 14px;
+      }
+
+      .fact {
+        padding-left: 12px;
+      }
+
+      .fact strong {
+        font-size: 24px;
+      }
+
+      .plot-size {
+        min-height: 126px;
+        padding: 18px 12px;
+      }
+
+      .plot-size strong {
+        font-size: 22px;
+      }
+
+      .plan-frame {
+        padding: 5px;
+      }
+
+      .plan-caption {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .amenities-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .map-frame,
+      .map-frame iframe {
+        min-height: 320px;
+        height: 320px;
+      }
+
+      .contact-form {
+        grid-template-columns: 1fr;
+      }
+
+      .form-field-wide {
+        grid-column: auto;
+      }
+
+      .footer-inner {
+        flex-direction: column;
       }
 
       .whatsapp {
-        right: 14px;
-        bottom: 14px;
+        right: 12px;
+        bottom: 12px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">Crystal Green Park</div>
-    <nav aria-label="Primary navigation">
-      <a href="#about">About</a>
-      <a href="#highlights">Highlights</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Crystal Green Park home">
+        <img src="logo.jpeg" alt="">
+        <span>Crystal Green Park</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#project">The project</a>
+        <a href="#plots">Plot sizes</a>
+        <a href="#master-plan">Master plan</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#location">Location</a>
+      </nav>
+      <a class="button header-cta" href="#contact">Enquire</a>
+    </div>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" id="top">
       <div class="hero-content">
+        <p class="eyebrow">Residential plots · Girwai, Gwalior</p>
         <h1>Crystal Green Park</h1>
-        <p>Premium Residential Plots for Modern Living in Gwalior</p>
-        <a href="#contact" class="btn">Book Site Visit</a>
-      </div>
-    </section>
-
-    <section id="about">
-      <h2>About Crystal Green Park</h2>
-      <p class="about-text">
-        Crystal Green Park is a premium plotted development located in a rapidly growing area of Gwalior.
-        Designed to offer a peaceful lifestyle with modern infrastructure, wide roads, green spaces and excellent
-        connectivity, it is the perfect destination for families and investors looking for long-term value.
-      </p>
-    </section>
-
-    <section id="highlights">
-      <h2>Project Highlights</h2>
-      <div class="features">
-        <div class="feature">
-          <h3>Gated Community</h3>
-          <p>Safe and secure environment.</p>
-        </div>
-        <div class="feature">
-          <h3>Wide Roads</h3>
-          <p>Planned road network for easy access.</p>
-        </div>
-        <div class="feature">
-          <h3>Green Landscape</h3>
-          <p>Nature-friendly development.</p>
-        </div>
-        <div class="feature">
-          <h3>Investment Opportunity</h3>
-          <p>High future growth potential.</p>
-        </div>
-        <div class="feature">
-          <h3>Prime Location</h3>
-          <p>Located in Sikandar Kampoo, Gwalior.</p>
-        </div>
-        <div class="feature">
-          <h3>Easy Connectivity</h3>
-          <p>Well connected to key city areas.</p>
+        <p class="hero-copy">Your land, your legacy. A thoughtfully planned residential community on A-B Road, NH-47.</p>
+        <div class="hero-actions">
+          <a class="button" href="#plots">Explore plot sizes</a>
+          <a class="button button-light" href="#master-plan">View project layout</a>
         </div>
       </div>
     </section>
 
-    <section id="gallery">
-      <h2>Project Gallery</h2>
-      <div class="gallery">
-        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80" alt="Open green land suitable for a plotted development">
-        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80" alt="Modern residential buildings">
-        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80" alt="Contemporary home exterior">
+    <section class="section" id="project">
+      <div class="section-wrap intro-grid">
+        <div>
+          <div class="section-heading">
+            <p class="eyebrow">A planned community</p>
+            <h2>Room to build a life of your own.</h2>
+          </div>
+          <p class="intro-copy">Crystal Green Park brings residential plots to Girwai, along the Agra-Bombay Road corridor. The brochure describes a covered campus with CCTV surveillance and dedicated security, together with green open spaces and infrastructure planned for comfortable everyday living.</p>
+        </div>
+        <aside class="intro-aside">
+          <strong>A-B Road · NH-47</strong>
+          <p>In front of Lodhi Dharam Kanta, Girwai, Gwalior, Madhya Pradesh.</p>
+        </aside>
       </div>
     </section>
 
-    <section class="contact" id="contact">
-      <h2>Contact Us</h2>
-      <div class="contact-layout">
-        <div class="contact-info">
-          <h3>Crystal Green Park</h3>
-          <p>
-            In Front of Lodhi Dharamkata,<br>
-            Sikandar Kampoo,<br>
-            Gwalior, Madhya Pradesh - 474001
-          </p>
-          <p>Phone: +91 9300611117</p>
-          <p>Email: thecrystalgreenpark@gmail.com</p>
-          <p>
-            GPS Coordinates:<br>
-            26.178548, 78.113114
-          </p>
-          <p>
-            <a class="btn" href="https://maps.google.com/?q=26.178548,78.113114" target="_blank" rel="noopener">
-              Open in Google Maps
-            </a>
-          </p>
+    <section class="facts-band" aria-label="Project area figures">
+      <div class="facts-grid">
+        <div class="fact">
+          <strong>22,270.36</strong>
+          <span>Total land area · sq. m</span>
         </div>
+        <div class="fact">
+          <strong>12,882</strong>
+          <span>Area under plots · sq. m</span>
+        </div>
+        <div class="fact">
+          <strong>2,418.66</strong>
+          <span>Open park space · sq. m</span>
+        </div>
+        <div class="fact">
+          <strong>45,000</strong>
+          <span>Landscaped garden · sq. ft, as stated in brochure</span>
+        </div>
+      </div>
+    </section>
 
-        <form action="https://formsubmit.co/thecrystalgreenpark@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="New Lead from Crystal Green Park Website">
+    <section class="section plots-section" id="plots">
+      <div class="section-wrap">
+        <div class="section-heading">
+          <p class="eyebrow">Choose your space</p>
+          <h2>Plot dimensions shown in the project material</h2>
+          <p>The supplied plan legend lists these standard residential plot sizes alongside commercial, LIG and EWS plots.</p>
+        </div>
+        <div class="plot-grid" aria-label="Residential plot sizes">
+          <div class="plot-size"><strong>25 × 55 ft</strong><span>Residential plots</span></div>
+          <div class="plot-size"><strong>20 × 55 ft</strong><span>Residential plots</span></div>
+          <div class="plot-size"><strong>25 × 50 ft</strong><span>Residential plots</span></div>
+          <div class="plot-size"><strong>22 × 50 ft</strong><span>Residential plots</span></div>
+        </div>
+        <p class="plot-note">Commercial, even, uneven, LIG and EWS plots are also marked in the project material. Confirm plot numbers, measurements and current availability with the project office.</p>
+      </div>
+    </section>
+
+    <section class="plan-section" id="master-plan">
+      <div class="section-wrap">
+        <div class="section-heading">
+          <p class="eyebrow">The site</p>
+          <h2>See the project layout.</h2>
+          <p>The supplied project rendering shows the plotted community, internal roads and landscaped edges.</p>
+        </div>
+        <figure class="plan-frame">
+          <img src="master-plan-web.jpg" alt="Aerial rendering of the Crystal Green Park residential plot layout" loading="lazy" decoding="async">
+        </figure>
+        <div class="plan-caption">
+          <span>Conceptual project rendering. Refer to the brochure for plot categories and dimensions.</span>
+          <a href="Crystal%20Green%20Park.pdf" target="_blank" rel="noopener">Open the project brochure</a>
+        </div>
+        <div class="section-heading plan-sheet-heading">
+          <p class="eyebrow">Numbered site plan</p>
+          <h2>Plot numbers and dimensions</h2>
+          <p>The dimensioned layout from the supplied brochure. Open the image separately to zoom in on individual plots.</p>
+        </div>
+        <figure class="plan-frame">
+          <a href="plot-master-plan.jpg" target="_blank" rel="noopener">
+            <img src="plot-master-plan.jpg" alt="Numbered Crystal Green Park master plan with individual plot dimensions and area statement" loading="lazy" decoding="async">
+          </a>
+        </figure>
+        <div class="plan-caption">
+          <span>Plot positions and dimensions are shown as published in the supplied project material.</span>
+          <a href="plot-master-plan.jpg" target="_blank" rel="noopener">Open full-size plot plan</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="amenities">
+      <div class="section-wrap">
+        <div class="section-heading">
+          <p class="eyebrow">Everyday essentials</p>
+          <h2>Planned for more than a plot.</h2>
+          <p>Shared spaces and infrastructure described in the project brochure and site plan.</p>
+        </div>
+        <div class="amenities-grid">
+          <article class="amenity"><h3>Gated and monitored</h3><p>Covered campus, CCTV surveillance and dedicated security guards.</p></article>
+          <article class="amenity"><h3>Green open spaces</h3><p>Landscaped garden, children’s park and planted pathways.</p></article>
+          <article class="amenity"><h3>Room to move</h3><p>Internal roads, walking paths and a jogging track.</p></article>
+          <article class="amenity"><h3>Outdoor activity</h3><p>Children’s play area and outdoor gym space.</p></article>
+          <article class="amenity"><h3>Planned services</h3><p>Underground electrification and a sewage treatment plant are identified in the plan.</p></article>
+          <article class="amenity"><h3>Water-conscious planning</h3><p>Rainwater harvesting is included in the site-plan legend.</p></article>
+        </div>
+        <p class="legal-note">Project features and approvals are reproduced from supplied promotional material; confirm current specifications with the project office.</p>
+      </div>
+    </section>
+
+    <section class="section location-section" id="location">
+      <div class="section-wrap location-grid">
+        <div class="location-copy">
+          <div class="section-heading">
+            <p class="eyebrow">Girwai · Gwalior</p>
+            <h2>Connected to the city.</h2>
+          </div>
+          <address>In front of Lodhi Dharam Kanta,<br>A-B Road, NH-47,<br>Girwai, Gwalior, Madhya Pradesh.</address>
+          <div class="nearby-list">
+            <p>Brochure-stated: about 2 minutes from the upcoming elevated road.</p>
+            <p>Brochure-stated: about 200 metres from the police station.</p>
+            <p>Brochure-stated: about 15 minutes from Maharaj Bada.</p>
+          </div>
+          <p class="legal-note">Travel times and distances are approximate and should be checked against current routes.</p>
+          <a class="button" href="https://maps.google.com/?q=Crystal+Green+Park,+Girwai,+Gwalior" target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
+        <div class="map-frame">
+          <iframe src="https://maps.google.com/maps?q=Crystal%20Green%20Park%2C%20Girwai%2C%20Gwalior&z=14&output=embed" loading="lazy" title="Map showing Crystal Green Park in Girwai, Gwalior"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="section-wrap contact-grid">
+        <div class="contact-details">
+          <div class="section-heading">
+            <p class="eyebrow">Speak with the project office</p>
+            <h2>Plan a visit.</h2>
+          </div>
+          <p>Ask about plot numbers, measurements and current availability.</p>
+          <p><a href="tel:+919183854454">+91 91838 54454</a></p>
+          <p><a href="mailto:thecrystalgreenpark@gmail.com">thecrystalgreenpark@gmail.com</a></p>
+          <p>In front of Lodhi Dharam Kanta, A-B Road, NH-47, Girwai, Gwalior.</p>
+        </div>
+        <form class="contact-form" action="https://formsubmit.co/thecrystalgreenpark@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New enquiry from Crystal Green Park website">
           <input type="hidden" name="_captcha" value="false">
-          <input type="text" name="Name" placeholder="Your Name" required>
-          <input type="tel" name="Phone Number" placeholder="Phone Number" required>
-          <input type="email" name="Email" placeholder="Email Address" required>
-          <textarea name="Message" rows="5" placeholder="Write your enquiry here..." required></textarea>
-          <button type="submit">Submit Inquiry</button>
+          <div class="form-field">
+            <label for="visitor-name">Name</label>
+            <input id="visitor-name" type="text" name="Name" autocomplete="name" required>
+          </div>
+          <div class="form-field">
+            <label for="visitor-phone">Phone</label>
+            <input id="visitor-phone" type="tel" name="Phone Number" autocomplete="tel" required>
+          </div>
+          <div class="form-field form-field-wide">
+            <label for="visitor-email">Email</label>
+            <input id="visitor-email" type="email" name="Email" autocomplete="email" required>
+          </div>
+          <div class="form-field form-field-wide">
+            <label for="visitor-message">How can we help?</label>
+            <textarea id="visitor-message" name="Message" required></textarea>
+          </div>
+          <button class="button form-field-wide" type="submit">Send enquiry</button>
         </form>
       </div>
     </section>
-
-    <section id="location">
-      <h2>Find Us On Map</h2>
-      <iframe
-        src="https://maps.google.com/maps?q=26.178548,78.113114&t=&z=16&ie=UTF8&iwloc=&output=embed"
-        loading="lazy"
-        title="Crystal Green Park location map">
-      </iframe>
-    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Crystal Green Park</p>
-    <p>In Front of Lodhi Dharamkata, Sikandar Kampoo, Gwalior, Madhya Pradesh - 474001</p>
-    <p>Phone: +91 9300611117 | Email: thecrystalgreenpark@gmail.com</p>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2026 Crystal Green Park · Girwai, Gwalior</p>
+      <p>Plot areas and project details are indicative; confirm final details with the project office.</p>
+    </div>
   </footer>
 
-  <a class="whatsapp" href="https://wa.me/919300611117" target="_blank" rel="noopener">WhatsApp</a>
+  <a class="whatsapp" href="https://wa.me/919183854454" target="_blank" rel="noopener" aria-label="Contact Crystal Green Park on WhatsApp">WhatsApp</a>
 </body>
 </html>
